@@ -1,0 +1,40 @@
+Big O notation
+Simplified analysis of an algorithm's efficiency.
+It is used to determine how the runtime of a program grow as the size of inputs increase.
+Ex - counting the chars of 20 char string takes twice the time as compared to 10 char string.
+
+1. complexity in terms of input size n.
+2.machine-independent.
+
+*O(1) or constant time doesnot depend on input size.
+*O(1)*n or linear time where time depends on n
+*O(n^2) or quadratic time
+
+-Type of measurement
+    1.worst case
+    2.best case
+    3.average case
+
+-general rules
+    1.ignores constants because as n gets bigger constant values dont matter. In practice constants do matter.
+    2.ignore low order terms when they are dominated by high order terms.
+    i.e if run time = O(1)+O(n) we exclude O(1) so runtime = O(n)
+        if run time = O(n^2)+O(n)+O(1) so runtime = O(n^2) as this is the dominatimng term. 
+
+
+Accessing the value of a variable is considered asymptotic constant time operation. or O(1)
+O(n^2) algorithms might be faster for smaller input sizes as compared to O(n) algorithms even on 
+similar hardware.
+
+Olog(n) ex - binary search
+size - 8 takes log2 8 takes 3 steps
+size -16 takes log2 16 takes 4 steps
+
+Theta Big O: This represents the worst-case performance for an algorithm, 
+setting an upper bound on how slow your code can be. It's noted as O(n²) . Big Theta (Θ)
+when n gets very large its gonna take 99% runtime and other factors will be insignificant. 
+
+Omega notation represents the lower bound of the running time of an algorithm. 
+Thus, it provides the best case complexity of an algorithm. 
+Omega gives the lower bound of a function 
+Ω(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0 }
