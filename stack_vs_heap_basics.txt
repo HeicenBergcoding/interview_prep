@@ -1,0 +1,3 @@
+-stack memory is a sort of memory allocation that OS continuously manages to store local variables in LIFO order.
+-heap memory is a type of memory that doesnot follow any order, its just used to allocate memory for global variables which
+stay in the memory until its lifecycle ends or deallocated.

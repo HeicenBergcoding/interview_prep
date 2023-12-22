@@ -1,0 +1,7 @@
+arrays are contigous area of memory broken down into equal sized elements and are indexed by contiguous integers.
+
+features:
+random access/ constant time access to elements to read and write the elements.
+
+O(1)/constant time to remove or add elements if beginning at the end/start.
+O(n)/linear time to remove the elements in the middle.
