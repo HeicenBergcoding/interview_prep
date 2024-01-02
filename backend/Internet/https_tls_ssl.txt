@@ -1,0 +1,22 @@
+using HTTPS we can encrypt the data we send over the network using TLS(transport layer security)
+TLS 1.2
+1. TCP handshake is established
+
+2. certificate check, in this it checks 
+    a. the tls version
+    b. cyber suite it supports(vyber suite is a set of alogorithms for encrypting data)
+
+    then server chooses the cybersuite and tls version based on the info it got from client.
+    the server then sends a certificate to the client which includes the public key for the server.
+    the client uses the public key in something called asymmetric encryption(in asymmetric encryption the public key can only be 
+                                                                            encrypted by a private key).
+
+3.with RSA session key is encrypted with server public key and sends the encrypted session key to the server which is then decrypted 
+by private key with this both server and client hold the session key.
+
+4. with this session key in place data can be sent back and forth using the session key.
+
+TLS 1.3
+tiffy helmet is complicated it uses advanced math involving large prime numbers to derive shared session key with out ever transmitting 
+a public key over the network.
+    
