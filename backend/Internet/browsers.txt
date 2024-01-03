@@ -1,0 +1,41 @@
+All major browsers whether it be android/windows are based on webkit
+
+The main function of a browser is to present the web resource you choose, by requesting it from the server and displaying it in the browser window. 
+The resource is usually an HTML document, but may also be a PDF, image, or some other type of content. 
+The location of the resource is specified by the user using a URI (Uniform Resource Identifier).
+
+https://web.dev/static/articles/howbrowserswork/image/browser-components-9cd8ff834cc9c_960.png
+
+The browser's high level structure:-
+1. UI - the part we see addressbar, bookmarking menu,back/forward buttons
+
+2. The browser engine: marshals actions between the UI and the rendering engine.
+
+3. The rendering engine: responsible for displaying requested content. 
+For example if the requested content is HTML, the rendering engine parses HTML and CSS, 
+and displays the parsed content on the screen.
+
+4. Networking: for network calls such as HTTP requests, using different implementations for different
+platform behind a platform-independent interface.
+
+5. UI backend: used for drawing basic widgets like combo boxes and windows. This backend exposes a generic interface that is not platform specific.
+Underneath it uses operating system user interface methods.
+
+6. JavaScript interpreter. Used to parse and execute JavaScript code.
+
+7. Data storage. This is a persistence layer. The browser may need to save all sorts of data locally, such as cookies. 
+Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.
+
+* It is important to note that browsers such as Chrome run multiple instances of the rendering engine: one for each tab. 
+Each tab runs in a separate process.
+
+The main flow:-
+The rendering engine will start getting the contents of the requested document from the networking layer. 
+This will usually be done in 8kB chunks.
+https://web.dev/static/articles/howbrowserswork/image/rendering-engine-basic-fl-2fba02b24e871_960.png
+
+The rendering engine will start parsing the HTML document and convert elements to DOM nodes in a tree called the "content tree". 
+
+It's important to understand that this is a gradual process. For better user experience, the rendering engine will try to display contents on the screen as soon as possible. 
+It will not wait until all HTML is parsed before starting to build and layout the render tree. Parts of the content will be parsed and displayed, while the process continues 
+with the rest of the contents that keeps coming from the network.
