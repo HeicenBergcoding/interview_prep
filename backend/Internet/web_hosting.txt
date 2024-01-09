@@ -1,0 +1,26 @@
+hosting is the home of the home of your website.
+If you own a website we will need somewhere to host it.
+
+hosting is basically a network infra that keeps your website available across the internet
+
+shared hosting
+    when we share the servers with other that also use the hosting service.
+    it is cheaper.
+    resources are shared so huge traffic is not handled well.
+    small businesses and small blogs.
+    security issue - if the physical server is compromised your website is also compromised.
+
+VPS(virtual private server)
+    the resources are not shared dedicated resources are provided for each user.
+    the server is being shared but the resources are isolated for each user.
+    vps are known to be easlily scalable.
+    with vps the hackers will have to attack your vps specifically even if another vps on the physical server is compromised.
+
+dedicated hosting
+    when user dont share resources with another user the entire physical server belongs to the user.
+    it is very expensive.
+
+Cloud hosting 
+    It allows for the content of the site to be spread across multiple virtual servers across different regions, 
+    and when demand increases, it is easy to scale. Because of this, cloud hosting is also more robust and reliable than web hosting, 
+    while allowing for more flexibility to tune the parameters as needed.
